@@ -23,7 +23,7 @@ export default {
   components: {
     FooterHome,
     RegSin,
-    NavbarA
+    NavbarA,
     //Tu treba novy komponent zaregistrovat iba jeho nazvom !! bez pripony
   }
 }

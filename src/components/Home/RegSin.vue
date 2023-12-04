@@ -11,6 +11,7 @@ export default {
     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto" style="list-style: none; display: flex; gap: 10px; flex-direction: row; justify-content: flex-end;">
       <li class="nav-item">
         <router-link to="/register">Zaregistruj sa</router-link>
+<!--        f06e-->
       </li>
       <li class="nav-item">
         <router-link to="/singUp">Prihlasit sa</router-link>

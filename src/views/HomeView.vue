@@ -1,15 +1,16 @@
-<!--<script>-->
-<!--import axios from 'axios'-->
-
 
 <script>
 import axios from "axios";
+import popUpOkno from "@/components/Home/popUpOkno.vue";
 
 export default {
   name: "HomeView",
+  components: {popUpOkno},
   data() {
     return {
       films: [],
+      visible: false,
+      filmDetail: null,
     };
   },
   created() {
@@ -27,7 +28,19 @@ export default {
           console.error("Neni:", error);
         });
   },
+
+  methods: {
+    aloha(film) {
+      this.filmDetail = film;
+      this.visible = true;
+    },
+    closeDiv() {
+      this.visible = false;
+    },
+  }
 };
+
+
 </script>
 
 <template>
@@ -122,11 +135,14 @@ export default {
               :alt="film.name"
               class="img-fluid"
               style="max-width: 200px; height: auto; padding: 5px;"
+              @click = "aloha(film)"
           />
         </a>
       </li>
     </ul>
   </div>
+<popUpOkno v-if="visible" :film="filmDetail" @close-this="closeDiv" style="height: 100%; width: 100%;"> </popUpOkno>
+
 </template>
 
 <style scoped>
@@ -137,15 +153,10 @@ export default {
 
 /*stlye menime iba v nasom komponente a niako inak nemeni vzhlad aplikacie*/
 /* Tu môžete pridať špecifické štýly pre vašu novú komponentu */
-
-
 body {
 
   background-size: cover;
 }
-
-
-
 
 .nav-item {
   padding-left: 10px;
