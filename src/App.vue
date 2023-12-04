@@ -1,15 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!--  componenty ktore su staticke sa prideluju podla umiestnenia-->
+  <reg-sin> </reg-sin>
+
+  <navbar-a></navbar-a>
+
+<!--  element ktory je v -if sa zobrazi iba ak je true a plati-->
+  <router-view/>
+<!--  <img alt="Vue logo" src="./assets/logo.png">-->
+  <footer-home></footer-home>
 </template>
 
+<!--//do scriptu sa prida novy komponent pomocou importu nazov komponentu,-->
+<!--//dalej je from (v lavej tabulke ukazeme kde sa to nachadza takze components.NAZOV_KOMPONENTU)-->
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavbarA from "@/components/Home/NavbarA.vue";
+import RegSin from "@/components/Home/RegSin.vue";
+import FooterHome from "@/components/Home/FooterHome.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FooterHome,
+    RegSin,
+    NavbarA
+    //Tu treba novy komponent zaregistrovat iba jeho nazvom !! bez pripony
   }
 }
 </script>
