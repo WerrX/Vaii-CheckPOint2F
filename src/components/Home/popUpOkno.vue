@@ -3,9 +3,7 @@ export default {
   name: "popUpOkno",
   props: {
     film:Object,
-
   },
-
   methods: {
     closeDiv() {
       this.$emit("close-this")
@@ -17,7 +15,7 @@ export default {
 <template>
       <div class = "aa" >
         <div class="okno" style="width: 30%; height: 75%; background-color: black; position: relative; display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
-          <div>
+          <div class="X" style="position: absolute; right: 10px;">
             <span @click="closeDiv" style="cursor: pointer; font-size: 30px; position: absolute; right: 0">&times;</span>
           </div>
           <img
@@ -46,20 +44,17 @@ export default {
   background-color: rgba(128, 128, 128, 0.5);
   align-items: center;
   height: 100vh;
-
+  z-index: 2;
 }
-
 .okno {
   width: 30%;
   height: 75%;
   background-color: black;
-  text-align: center; /* Center text horizontally */
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white; /* Set text color as needed */
+  color: white;
 }
-
-
 </style>

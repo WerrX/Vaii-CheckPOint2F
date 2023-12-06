@@ -1,12 +1,7 @@
 <template>
-<!--  componenty ktore su staticke sa prideluju podla umiestnenia-->
   <reg-sin> </reg-sin>
-
   <navbar-a></navbar-a>
-
-<!--  element ktory je v -if sa zobrazi iba ak je true a plati-->
   <router-view/>
-<!--  <img alt="Vue logo" src="./assets/logo.png">-->
   <footer-home></footer-home>
 </template>
 
@@ -36,6 +31,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

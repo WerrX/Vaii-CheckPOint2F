@@ -14,7 +14,7 @@ export default {
         <div class="col">
           <div class="row row-cols-4">
             <div class="col">
-              <router-link to="/help">Pomoc</router-link>
+              <router-link to="/help" style="color: white; text-decoration: none">Pomoc</router-link>
             </div>
             <div class="col"><a class="footer-link" href="#">Filmy</a></div>
             <div class="col"><a class="footer-link" href="#">Filmy s dabuingom</a></div>
@@ -44,10 +44,10 @@ export default {
 
 <style scoped>
 footer {
-  background-color: #333; /* Adjust the background color as needed */
-  color: white; /* Adjust the text color as needed */
+  background-color: #333;
+  color: white;
   padding: 20px 0;
-  margin-top: auto; /* Push the footer to the bottom */
+  margin-top: auto;
 }
 
 .container {
@@ -55,16 +55,12 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
-/* Add other styles for your footer content as needed */
 .footer-link {
   color: white;
   text-decoration: none;
   font-size: 18px;
   font-family: Arial;
 }
-
-
 .imageSlide {
   max-height: 50px;
   max-width: 50px;

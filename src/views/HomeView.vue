@@ -17,14 +17,10 @@ export default {
     axios
         .get("http://127.0.0.1:8000/films/")
         .then((response) => {
-          // Update films data
           this.films = response.data;
-
-          // Optionally log the response data for debugging
           console.log(response.data);
         })
         .catch((error) => {
-          // Handle errors
           console.error("Neni:", error);
         });
   },
@@ -101,7 +97,7 @@ export default {
   <div class="container-2nacv " id="nav2">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
       <div class="Netflix d-flex justify-content-between">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-bar2">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-bar2" style="padding-left: 80%; ">
           <li class="nav-item">
             <a class="nav-link" href="#">Filmy</a>
           </li>
@@ -145,25 +141,20 @@ export default {
 
 </template>
 
-<style scoped>
 
+<style scoped>
 .container{
   margin: 0 auto;
 }
-
 /*stlye menime iba v nasom komponente a niako inak nemeni vzhlad aplikacie*/
 /* Tu môžete pridať špecifické štýly pre vašu novú komponentu */
 body {
 
   background-size: cover;
 }
-
 .nav-item {
   padding-left: 10px;
 }
-
-/*navigacia1 end*/
-
 /* inline prihlsenie a reg*/
 #headera .nav-item {
   display: inline-block;
